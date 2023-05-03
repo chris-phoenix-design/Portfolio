@@ -97,7 +97,7 @@
             </div>
 
             <div class="header-buttons">
-              <a href="#" target="_blank" class="btn btn-primary">Download CV</a>
+              <a id="generate-pdf-btn" class="btn btn-primary">Download CV</a>
             </div>
 
             <div class="copyrights">© 2023 All rights reserved.</div>
@@ -1185,3 +1185,15 @@
     <script src="js/main.js"></script>
   </body>
 </html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+<script>
+  const generatePdf = () => {
+    const doc = new jsPDF();
+    doc.text('Hello world!', 10, 10);
+    doc.save('sample.pdf');
+  };
+
+  const generatePdfBtn = document.getElementById('generate-pdf-btn');
+  generatePdfBtn.addEventListener('click', generatePdf);
+</script>
