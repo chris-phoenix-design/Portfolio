@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
   </head>
 
   <body>
@@ -1186,14 +1187,13 @@
   </body>
 </html>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
 <script>
-  const generatePdf = () => {
-    const doc = new jsPDF();
-    doc.text('Hello world!', 10, 10);
-    doc.save('sample.pdf');
-  };
-
-  const generatePdfBtn = document.getElementById('generate-pdf-btn');
-  generatePdfBtn.addEventListener('click', generatePdf);
+  window.onload = function () {
+    const pdfBtn = document.getElementById("generate-pdf-btn");
+    pdfBtn.addEventListener("click", () => {
+      const doc = new jsPDF();
+      doc.text("Hello world!", 10, 10);
+      doc.save("hello.pdf");
+    });
+  }
 </script>
