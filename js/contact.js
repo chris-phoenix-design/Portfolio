@@ -1,6 +1,7 @@
 let contactForm = document.getElementById("contact_form");
 
 async function submitForm(event) {
+    debugger;
     event.preventDefault();
     let name = contactForm["name"];
     let phone = contactForm["phone"];
