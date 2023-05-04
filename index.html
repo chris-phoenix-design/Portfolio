@@ -1296,12 +1296,7 @@
                   <div class="block-title">
                     <h3>How Can I <span>Help You?</span></h3>
                   </div>
-                  <style>
-                    .cdk-global-scrollblock {
-                      position: initial !important;
-                      overflow: hidden !important;
-                    }
-                  </style>
+
                   <form id="contact_form" class="contact-form" action="" method="post">
 
                     <div class="messages"></div>
@@ -1316,6 +1311,7 @@
                             <div class="form-control-border"></div>
                             <div class="help-block with-errors"></div>
                           </div>
+
                           <div class="form-group form-group-with-icon">
                             <input id="form_email" type="email" name="email" class="form-control" placeholder=""
                               required="required" data-error="Valid email is required.">
@@ -1348,10 +1344,12 @@
                           </div>
                         </div>
                       </div>
+                      <button class="g-recaptcha" data-sitekey="6LcY_98lAAAAAF-G-wSZDxe1CBF4AJwJeQdQ9ioZ"
+                        data-callback='onSubmit' data-action='submit' type="submit">Send message</button>
+                      <!-- <div class="g-recaptcha" data-sitekey="6LcY_98lAAAAAF-G-wSZDxe1CBF4AJwJeQdQ9ioZ"
+                        data-theme="dark"></div> -->
 
-                      <input class="g-recaptcha" data-sitekey="6LcY_98lAAAAAF-G-wSZDxe1CBF4AJwJeQdQ9ioZ"
-                        data-callback='onSubmit' data-action='submit' type="submit" class="button btn-send"
-                        value="Send message">
+                      <!-- <input type="submit" class="button btn-send" value="Send message"> -->
                     </div>
                   </form>
                 </div>
