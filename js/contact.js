@@ -9,7 +9,6 @@ async function submitForm(event) {
     let email = contactForm["email"];
     let subject = contactForm["subject"];
     let message = contactForm["message"];
-    var recaptcharesponse = grecaptcha.getResponse();
     debugger;
     const params = {
         Name: name.value,
