@@ -1,4 +1,4 @@
-let contactForm = document.getElementById("contact_form");
+let contactForm = document.getElementById("message_form");
 
 async function submitForm(event) {
     debugger;
