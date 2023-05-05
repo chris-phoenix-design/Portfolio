@@ -1,6 +1,6 @@
 let contactForm = document.getElementById("message_form");
 
-async function submitForm(event) {
+const submitForm = (event) => {
 
     event.preventDefault();
     grecaptcha.execute();
@@ -9,7 +9,7 @@ async function submitForm(event) {
     let email = contactForm["email"];
     let subject = contactForm["subject"];
     let message = contactForm["message"];
-    debugger;
+
     const params = {
         Name: name.value,
         Phone: phone.value,
@@ -26,12 +26,11 @@ async function submitForm(event) {
         body: JSON.stringify(params)
     };
 
-    let response = await fetch('', options);
-    if (response.ok) {
-        contactForm.reset();
-    } else {
-        contactForm.reset();
-    }
+    fetch('https://localhost:7098/api/emailsender/ProfileContact', options)
+
+
+    contactForm.reset();
+
 }
 
 
