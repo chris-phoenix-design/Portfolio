@@ -26,7 +26,7 @@ const submitForm = (event) => {
         body: JSON.stringify(params)
     };
 
-    fetch('https://localhost:7098/api/emailsender/ProfileContact', options)
+    fetch('https://api-phoenix.azurewebsites.net/api/emailsender/ProfileContact', options)
 
 
     contactForm.reset();
